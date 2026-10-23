@@ -1,0 +1,778 @@
+{
+  "schoolName": "Sample School (Assessment Data)",
+  "academicYear": "2026-27",
+  "workingDays": [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY"
+  ],
+  "bellSchedule": {
+    "mondayToThursday": {
+      "teachingPeriods": [1, 2, 3, 4, 5, 6, 7, 8],
+      "note": "8 teaching slots per day. Periods 1–4 are before lunch; 5–8 are after lunch."
+    },
+    "fridayAndSaturday": {
+      "teachingPeriods": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "note": "10 teaching slots per day."
+    },
+    "weeklyTeachingCapacity": 52
+  },
+  "classSections": [
+    {
+      "id": "class-1-lily",
+      "displayName": "Class 1 - Lily",
+      "grade": "1",
+      "section": "Lily",
+      "curriculum": [
+        {
+          "subjectId": "c1-english",
+          "name": "English",
+          "periodsPerWeek": 8,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-priyanka"
+        },
+        {
+          "subjectId": "c1-hindi",
+          "name": "Hindi",
+          "periodsPerWeek": 8,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-swati"
+        },
+        {
+          "subjectId": "c1-math",
+          "name": "Mathematics",
+          "periodsPerWeek": 8,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-aleena"
+        },
+        {
+          "subjectId": "c1-evs",
+          "name": "E.V.S.",
+          "periodsPerWeek": 8,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-anjali"
+        },
+        {
+          "subjectId": "c1-gk",
+          "name": "G.K./Moral",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-ritika"
+        },
+        {
+          "subjectId": "c1-art",
+          "name": "Art Education",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ruchi"
+        },
+        {
+          "subjectId": "c1-comm",
+          "name": "Communication",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-aleena"
+        },
+        {
+          "subjectId": "c1-computer",
+          "name": "Computer",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-neelam"
+        },
+        {
+          "subjectId": "c1-games",
+          "name": "Games",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-ayushi",
+          "restrictedPeriods": [1, 2]
+        },
+        {
+          "subjectId": "c1-karate",
+          "name": "Karate",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kajal"
+        },
+        {
+          "subjectId": "c1-happyfeet",
+          "name": "Happy Feet",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kajal"
+        }
+      ]
+    },
+    {
+      "id": "class-5-lily",
+      "displayName": "Class 5 - Lily",
+      "grade": "5",
+      "section": "Lily",
+      "curriculum": [
+        {
+          "subjectId": "c5-art",
+          "name": "Art Education",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ruchi"
+        },
+        {
+          "subjectId": "c5-comm",
+          "name": "Communication",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-rajni"
+        },
+        {
+          "subjectId": "c5-computer",
+          "name": "Computer",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-meenakshi"
+        },
+        {
+          "subjectId": "c5-eng-lang",
+          "name": "English Language",
+          "periodsPerWeek": 5,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-soma"
+        },
+        {
+          "subjectId": "c5-eng-lit",
+          "name": "English Literature",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-soma"
+        },
+        {
+          "subjectId": "c5-gk",
+          "name": "G.K./Moral",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-rajni"
+        },
+        {
+          "subjectId": "c5-hindi",
+          "name": "Hindi",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-jyoti"
+        },
+        {
+          "subjectId": "c5-hindi-vy",
+          "name": "Hindi Vyakaran",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-jyoti"
+        },
+        {
+          "subjectId": "c5-math",
+          "name": "Mathematics",
+          "periodsPerWeek": 7,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-rajni"
+        },
+        {
+          "subjectId": "c5-science",
+          "name": "Science",
+          "periodsPerWeek": 6,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-noshin"
+        },
+        {
+          "subjectId": "c5-sst",
+          "name": "Social Studies",
+          "periodsPerWeek": 6,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-preeti"
+        },
+        {
+          "subjectId": "c5-karate",
+          "name": "Karate",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kajal"
+        },
+        {
+          "subjectId": "c5-sanskrit",
+          "name": "Sanskrit",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-shivendra"
+        }
+      ]
+    },
+    {
+      "id": "class-8-lily",
+      "displayName": "Class 8 - Lily",
+      "grade": "8",
+      "section": "Lily",
+      "curriculum": [
+        {
+          "subjectId": "c8-art",
+          "name": "Art Education",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-laxmi"
+        },
+        {
+          "subjectId": "c8-biology",
+          "name": "Biology",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-namita"
+        },
+        {
+          "subjectId": "c8-chemistry",
+          "name": "Chemistry",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-saksham"
+        },
+        {
+          "subjectId": "c8-computer",
+          "name": "Computer",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-harpreet"
+        },
+        {
+          "subjectId": "c8-eng-lang",
+          "name": "English Language",
+          "periodsPerWeek": 3,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ritika"
+        },
+        {
+          "subjectId": "c8-eng-lit",
+          "name": "English Literature",
+          "periodsPerWeek": 5,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ritika"
+        },
+        {
+          "subjectId": "c8-geography",
+          "name": "Geography",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kavita"
+        },
+        {
+          "subjectId": "c8-hindi",
+          "name": "Hindi",
+          "periodsPerWeek": 5,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-sujata"
+        },
+        {
+          "subjectId": "c8-hindi-vy",
+          "name": "Hindi Vyakaran",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-sujata"
+        },
+        {
+          "subjectId": "c8-history",
+          "name": "History",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-leena"
+        },
+        {
+          "subjectId": "c8-math",
+          "name": "Mathematics",
+          "periodsPerWeek": 9,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ashish"
+        },
+        {
+          "subjectId": "c8-physics",
+          "name": "Physics",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-shashi"
+        },
+        {
+          "subjectId": "c8-games",
+          "name": "Games",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-ayushi",
+          "restrictedPeriods": [1, 2]
+        }
+      ]
+    },
+    {
+      "id": "class-10-lily",
+      "displayName": "Class 10 - Lily",
+      "grade": "10",
+      "section": "Lily",
+      "curriculum": [
+        {
+          "subjectId": "c10-math",
+          "name": "Mathematics",
+          "periodsPerWeek": 9,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ashish"
+        },
+        {
+          "subjectId": "c10-eng-lang",
+          "name": "English Language",
+          "periodsPerWeek": 3,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-soumya"
+        },
+        {
+          "subjectId": "c10-eng-lit",
+          "name": "English Literature",
+          "periodsPerWeek": 3,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-soumya"
+        },
+        {
+          "subjectId": "c10-hindi",
+          "name": "Hindi",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-jyoti"
+        },
+        {
+          "subjectId": "c10-physics",
+          "name": "Physics",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-shashi"
+        },
+        {
+          "subjectId": "c10-chemistry",
+          "name": "Chemistry",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-saksham"
+        },
+        {
+          "subjectId": "c10-biology",
+          "name": "Biology",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-namita"
+        },
+        {
+          "subjectId": "c10-history",
+          "name": "History",
+          "periodsPerWeek": 5,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-leena"
+        },
+        {
+          "subjectId": "c10-geography",
+          "name": "Geography",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-kavita"
+        },
+        {
+          "subjectId": "c10-computer",
+          "name": "Computer",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-harpreet"
+        },
+        {
+          "subjectId": "c10-pe",
+          "name": "Physical Education",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-fazal"
+        },
+        {
+          "subjectId": "c10-games",
+          "name": "Games",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kajal",
+          "restrictedPeriods": [1, 2]
+        }
+      ]
+    },
+    {
+      "id": "class-12-lily",
+      "displayName": "Class 12 - Lily",
+      "grade": "12",
+      "section": "Lily",
+      "curriculum": [
+        {
+          "subjectId": "c12-accounts",
+          "name": "Accounts",
+          "periodsPerWeek": 11,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-anjulika"
+        },
+        {
+          "subjectId": "c12-business",
+          "name": "Business Studies",
+          "periodsPerWeek": 11,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-neha"
+        },
+        {
+          "subjectId": "c12-economics",
+          "name": "Economics",
+          "periodsPerWeek": 10,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-ruhamah"
+        },
+        {
+          "subjectId": "c12-eng-lang",
+          "name": "English Language",
+          "periodsPerWeek": 5,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-soumya"
+        },
+        {
+          "subjectId": "c12-eng-lit",
+          "name": "English Literature",
+          "periodsPerWeek": 7,
+          "maxPeriodsPerDay": 2,
+          "teacherId": "t-soumya"
+        },
+        {
+          "subjectId": "c12-games",
+          "name": "Games",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kajal",
+          "restrictedPeriods": [1, 2]
+        },
+        {
+          "subjectId": "c12-library",
+          "name": "Library",
+          "periodsPerWeek": 2,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kavita"
+        },
+        {
+          "subjectId": "c12-games-lib",
+          "name": "Games / Library",
+          "periodsPerWeek": 4,
+          "maxPeriodsPerDay": 1,
+          "teacherId": "t-kajal",
+          "restrictedPeriods": [1, 2]
+        }
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "id": "t-priyanka",
+      "name": "Priyanka Rana",
+      "code": "E2904",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-swati",
+      "name": "Swati Budholiya",
+      "code": "RVS172",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-aleena",
+      "name": "Aleena Khan",
+      "code": "RVT095",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-anjali",
+      "name": "Anjali Singh Chauhan",
+      "code": "RVS195",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-ritika",
+      "name": "Ritika Malviya",
+      "code": "100047",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 30
+    },
+    {
+      "id": "t-ruchi",
+      "name": "Ruchi Singh",
+      "code": "002",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-neelam",
+      "name": "Neelam Pawar Digarse",
+      "code": "RVS148",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-ayushi",
+      "name": "Ayushi Sharma",
+      "code": "100091",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-kajal",
+      "name": "Kajal Shrivastava",
+      "code": "RVS188",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 36
+    },
+    {
+      "id": "t-rajni",
+      "name": "Rajni Soni",
+      "code": "E2787",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 30
+    },
+    {
+      "id": "t-meenakshi",
+      "name": "Meenakshi Singh",
+      "code": "RVS143",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-soma",
+      "name": "Soma Dinda",
+      "code": "RVS154",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-jyoti",
+      "name": "Jyoti Solanki",
+      "code": "100049",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-noshin",
+      "name": "Noshin Siddiqui",
+      "code": "RVS157",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-preeti",
+      "name": "Preeti Muchhal",
+      "code": "RVS95",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-shivendra",
+      "name": "Shivendra Bopche",
+      "code": "RVS173",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-laxmi",
+      "name": "Laxmi Ghatt",
+      "code": "E1014",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-namita",
+      "name": "Namita Nikam",
+      "code": "RVS67",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-saksham",
+      "name": "Saksham Sharma",
+      "code": "RVS159",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-harpreet",
+      "name": "Harpreet Kaur",
+      "code": "E2701",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-sujata",
+      "name": "Sujata Naidu",
+      "code": "E2133",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-leena",
+      "name": "Leena Jain",
+      "code": "SPS26",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 36
+    },
+    {
+      "id": "t-kavita",
+      "name": "Kavita A",
+      "code": "E2628",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 30
+    },
+    {
+      "id": "t-ashish",
+      "name": "Ashish Thakur",
+      "code": "RVS115",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 36
+    },
+    {
+      "id": "t-shashi",
+      "name": "Shashi Shukla",
+      "code": "RVS136",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-soumya",
+      "name": "Soumya Nair",
+      "code": "RVS190",
+      "maxPeriodsPerDay": 6,
+      "maxPeriodsPerWeek": 36
+    },
+    {
+      "id": "t-fazal",
+      "name": "Mohd Fazal Rehman",
+      "code": "E2336",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    },
+    {
+      "id": "t-anjulika",
+      "name": "Anjulika Singh",
+      "code": "RVS85",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-neha",
+      "name": "Neha Guha",
+      "code": "RVS189",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 24
+    },
+    {
+      "id": "t-ruhamah",
+      "name": "Ruhamah David",
+      "code": "RVS54",
+      "maxPeriodsPerDay": 4,
+      "maxPeriodsPerWeek": 20
+    }
+  ],
+  "hardConstraints": [
+    {
+      "id": "HC-1",
+      "code": "one_subject_per_slot",
+      "description": "Each class has exactly one subject per day/period."
+    },
+    {
+      "id": "HC-2",
+      "code": "no_teacher_double_booking",
+      "description": "A teacher cannot teach two classes at the same day/period."
+    },
+    {
+      "id": "HC-3",
+      "code": "weekly_subject_totals",
+      "description": "Each subject must receive exactly its required periods per week."
+    },
+    {
+      "id": "HC-4",
+      "code": "daily_subject_max",
+      "description": "A subject must not exceed maxPeriodsPerDay on any day."
+    },
+    {
+      "id": "HC-5",
+      "code": "teacher_workload",
+      "description": "A teacher must not exceed maxPeriodsPerDay or maxPeriodsPerWeek."
+    },
+    {
+      "id": "HC-6",
+      "code": "games_not_early",
+      "description": "Subjects named Games or Games / Library must not be placed in periods 1 or 2."
+    },
+    {
+      "id": "HC-7",
+      "code": "valid_teaching_slots",
+      "description": "Schedule only within valid teaching periods (8 on Mon–Thu, 10 on Fri–Sat)."
+    }
+  ],
+  "softConstraints": [
+    {
+      "id": "SC-1",
+      "code": "math_morning_preference",
+      "description": "Prefer Mathematics in periods 1–4 on Mon–Thu for all classes.",
+      "priority": "high",
+      "penaltyWeight": 10,
+      "modelingHint": "Add penalty variable when Math is scheduled outside periods 1–4 on Mon–Thu; minimize in objective."
+    },
+    {
+      "id": "SC-2",
+      "code": "avoid_duplicate_subject_same_day",
+      "description": "Avoid scheduling the same subject twice on the same day for a class when possible.",
+      "priority": "medium",
+      "penaltyWeight": 5,
+      "modelingHint": "Penalty when sum(day assignments for subject) > 1; minimize in objective."
+    }
+  ],
+  "sharedTeachersAcrossClasses": [
+    {
+      "teacherId": "t-ruchi",
+      "classes": ["Class 1 - Lily", "Class 5 - Lily"],
+      "note": "Teaches Art Education in both primary classes."
+    },
+    {
+      "teacherId": "t-ashish",
+      "classes": ["Class 8 - Lily", "Class 10 - Lily"],
+      "note": "Teaches Mathematics in both secondary classes."
+    },
+    {
+      "teacherId": "t-soumya",
+      "classes": ["Class 10 - Lily", "Class 12 - Lily"],
+      "note": "Teaches English in both senior classes."
+    },
+    {
+      "teacherId": "t-kajal",
+      "classes": [
+        "Class 1 - Lily",
+        "Class 5 - Lily",
+        "Class 10 - Lily",
+        "Class 12 - Lily"
+      ],
+      "note": "Teaches activities/Games across multiple levels."
+    },
+    {
+      "teacherId": "t-kavita",
+      "classes": ["Class 8 - Lily", "Class 10 - Lily", "Class 12 - Lily"],
+      "note": "Teaches Geography and Library."
+    },
+    {
+      "teacherId": "t-leena",
+      "classes": ["Class 8 - Lily", "Class 10 - Lily"],
+      "note": "Teaches History in both classes."
+    },
+    {
+      "teacherId": "t-ayushi",
+      "classes": ["Class 1 - Lily", "Class 8 - Lily"],
+      "note": "Teaches Games in primary and secondary."
+    }
+  ]
+}

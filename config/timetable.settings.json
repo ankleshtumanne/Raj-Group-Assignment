@@ -1,0 +1,24 @@
+{
+  "$comment": "Non-secret run settings for the console host. Precedence: command-line > environment variables (TIMETABLE_*) > this file > built-in defaults. Paths are resolved relative to the current directory and must stay inside DataRoot / ConfigRoot / OutputRoot.",
+  "DataRoot": "data/client",
+  "AssignmentsWorkbook": "data/dummy/TEACHER_CLASS_ALLOCATION.DUMMY.xlsx",
+  "ConfigRoot": "config",
+  "OutputRoot": "output",
+  "Solver": {
+    "TimeLimitSeconds": 120,
+    "Workers": 8,
+    "RandomSeed": 42,
+    "WarmStart": true
+  },
+  "Rules": {
+    "Profile": "strict",
+    "ExcludePrePrimary": true,
+    "ZeroWorkloadPolicy": "Exclude",
+    "UnstaffedPolicy": "ReserveSlot",
+    "RunDiagnosticOnInfeasible": true
+  },
+  "Matching": {
+    "ApplySubjectAliases": true,
+    "PlaceholderTeacherCodes": [ "UNASSIGNED-TT" ]
+  }
+}

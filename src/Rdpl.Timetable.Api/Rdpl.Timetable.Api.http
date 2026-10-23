@@ -1,0 +1,36 @@
+### Requests for the VS Code REST Client / Visual Studio .http runner.
+### Set the key once:  dotnet user-secrets set "Api:ApiKey" "<at least 32 characters>" --project src/Rdpl.Timetable.Api
+@host = http://localhost:5080
+@apiKey = {{$dotenv TIMETABLE_API_KEY}}
+
+GET {{host}}/health
+
+###
+POST {{host}}/api/timetable/load-data
+X-Api-Key: {{apiKey}}
+Content-Type: application/json
+
+{ "profile": "strict" }
+
+###
+POST {{host}}/api/timetable/generate
+X-Api-Key: {{apiKey}}
+Content-Type: application/json
+
+{ "profile": "pragmatic", "timeLimitSeconds": 180, "workers": 8 }
+
+###
+GET {{host}}/api/timetable/jobs/REPLACE_WITH_JOB_ID
+X-Api-Key: {{apiKey}}
+
+###
+GET {{host}}/api/timetable/sections/class-10-lily
+X-Api-Key: {{apiKey}}
+
+###
+GET {{host}}/api/timetable/teachers
+X-Api-Key: {{apiKey}}
+
+###
+GET {{host}}/api/timetable/conflicts
+X-Api-Key: {{apiKey}}

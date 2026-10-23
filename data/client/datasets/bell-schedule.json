@@ -1,0 +1,47 @@
+{
+  "scheduleName": "Schedule-1",
+  "workingDays": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"],
+  "dayNumbering": { "MONDAY": 1, "TUESDAY": 2, "WEDNESDAY": 3, "THURSDAY": 4, "FRIDAY": 5, "SATURDAY": 6 },
+  "mondayToThursday": {
+    "teachingPeriods": [
+      { "period": 1, "slot": "1A", "start": "07:45", "end": "08:25", "type": "Teaching" },
+      { "period": 2, "slot": "1B", "start": "08:25", "end": "09:05", "type": "Teaching" },
+      { "period": 3, "slot": "2A", "start": "09:15", "end": "09:55", "type": "Teaching" },
+      { "period": 4, "slot": "2B", "start": "09:55", "end": "10:35", "type": "Teaching" },
+      { "period": 5, "slot": "3A", "start": "11:05", "end": "11:40", "type": "Teaching" },
+      { "period": 6, "slot": "3B", "start": "11:40", "end": "12:15", "type": "Teaching" },
+      { "period": 7, "slot": "4A", "start": "12:20", "end": "12:55", "type": "Teaching" },
+      { "period": 8, "slot": "4B", "start": "12:55", "end": "13:30", "type": "Teaching" }
+    ],
+    "breakPeriods": [
+      { "slot": "Short Break", "start": "09:05", "end": "09:15" },
+      { "slot": "Lunch Break", "start": "10:35", "end": "11:05" },
+      { "slot": "Short Break", "start": "12:15", "end": "12:20" }
+    ],
+    "teachingPeriodsPerDay": 8,
+    "morningPeriods": [1, 2, 3, 4],
+    "afterLunchPeriods": [5, 6, 7, 8]
+  },
+  "fridayAndSaturday": {
+    "teachingPeriods": [
+      { "period": 1, "slot": "1A", "start": "07:45", "end": "08:15", "type": "Teaching" },
+      { "period": 2, "slot": "1B", "start": "08:15", "end": "08:45", "type": "Teaching" },
+      { "period": 3, "slot": "2A", "start": "08:55", "end": "09:30", "type": "Teaching" },
+      { "period": 4, "slot": "2B", "start": "09:30", "end": "10:00", "type": "Teaching" },
+      { "period": 5, "slot": "3A", "start": "10:30", "end": "11:00", "type": "Teaching" },
+      { "period": 6, "slot": "3B", "start": "11:00", "end": "11:30", "type": "Teaching" },
+      { "period": 7, "slot": "4A", "start": "11:30", "end": "12:00", "type": "Teaching" },
+      { "period": 8, "slot": "4B", "start": "12:00", "end": "12:30", "type": "Teaching" },
+      { "period": 9, "slot": "5A", "start": "12:30", "end": "13:00", "type": "Teaching" },
+      { "period": 10, "slot": "5B", "start": "13:00", "end": "13:30", "type": "Teaching" }
+    ],
+    "breakPeriods": [
+      { "slot": "Short Break", "start": "08:45", "end": "08:55" },
+      { "slot": "Lunch Break", "start": "10:00", "end": "10:30" }
+    ],
+    "teachingPeriodsPerDay": 10,
+    "morningPeriods": [1, 2, 3, 4],
+    "afterLunchPeriods": [5, 6, 7, 8, 9, 10]
+  },
+  "weeklyTeachingCapacity": 52
+}

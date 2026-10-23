@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Rdpl.Timetable.Cli</RootNamespace>
+    <AssemblyName>rdpl-timetable</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rdpl.Timetable.Core\Rdpl.Timetable.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Rdpl.Timetable</RootNamespace>
+    <AssemblyName>Rdpl.Timetable.Core</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Google OR-Tools CP-SAT. Version 9.15.x matches the native engine and C# API sources
+      this project was verified against (see docs/VERIFICATION.md).
+      Excel (.xlsx) is read with the BCL only (System.IO.Compression + System.Xml): no ClosedXML needed.
+    -->
+    <PackageReference Include="Google.OrTools" Version="9.15.6755" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Rdpl.Timetable.Tests" />
+  </ItemGroup>
+
+</Project>

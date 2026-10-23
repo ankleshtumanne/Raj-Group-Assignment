@@ -1,0 +1,307 @@
+{
+  "$schema": "engine-rules-v1",
+  "authoritativeSource": "Timetable-Engine-Rules.md",
+  "coverageMap": "Timetable-Engine-Rules-Coverage.md",
+  "tiers": {
+    "mandatoryHard": "Must be enforced in CP-SAT — never violated",
+    "blockAndLayout": "Block/pairing/layout rules from production engine",
+    "soft": "Objective function / penalty weights",
+    "optional": "Implement if data exists; document if skipped",
+    "deferred": "Out of scope for this assessment (substitution engine)"
+  },
+  "mandatoryHard": [
+    {
+      "id": "H1",
+      "engineRuleId": "H1",
+      "code": "no_teacher_double_booking",
+      "description": "A teacher cannot teach two sections at the same day/period.",
+      "cpSatHint": "AddAtMostOne per teacher × day × period across all assignments",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "H2",
+      "engineRuleId": "H2",
+      "code": "teacher_off_day",
+      "description": "If a teacher is unavailable on a day (offDays / unavailable periods), they cannot be scheduled that day.",
+      "cpSatHint": "Fix assignment vars to 0 for blocked day/period slots",
+      "coverage": "built-in done",
+      "dataNote": "teacher_availability is empty in sample data — assume fully available unless you load offDays"
+    },
+    {
+      "id": "H3",
+      "engineRuleId": "H3",
+      "code": "one_lesson_per_section_slot",
+      "description": "Each section has exactly one lesson per valid teaching day/period.",
+      "cpSatHint": "AddExactlyOne per section × day × period",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "H4",
+      "engineRuleId": "H4",
+      "code": "no_break_periods",
+      "description": "Break slots are never used for teaching.",
+      "cpSatHint": "Do not create variables for break periods",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "H6",
+      "engineRuleId": "H6",
+      "code": "day_restrictions",
+      "description": "If a subject has dayRestrictions (e.g. ONLY ON Saturday), it may only be placed on those days.",
+      "cpSatHint": "Fix vars to 0 outside allowed days",
+      "coverage": "text + built-in done"
+    },
+    {
+      "id": "H7",
+      "engineRuleId": "H7",
+      "code": "daily_subject_max",
+      "description": "A subject cannot exceed periodsPerDay on any single day for a section.",
+      "cpSatHint": "Add(sum(day assignments) <= periodsPerDay)",
+      "coverage": "built-in + text done"
+    },
+    {
+      "id": "H8",
+      "engineRuleId": "H8",
+      "code": "weekly_curriculum_totals",
+      "description": "Each section-subject/activity receives exactly periodsPerWeek (52 ppw total per section).",
+      "cpSatHint": "Add(sum(week assignments) == periodsPerWeek)",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "H9",
+      "engineRuleId": "H9",
+      "code": "activity_fixed_slots",
+      "description": "Activities with fixedSlots may only be placed on listed (day, period) combinations.",
+      "cpSatHint": "Fix activity vars to allowed slots only",
+      "coverage": "data + text done"
+    },
+    {
+      "id": "H10",
+      "engineRuleId": "H10",
+      "code": "exclude_zero_workload",
+      "description": "Subjects/assignments with periodsPerWeek <= 0 are excluded from scheduling.",
+      "cpSatHint": "Do not create variables; report in dataConflicts",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "G1",
+      "engineRuleId": "G1",
+      "code": "games_library_not_first_pair",
+      "description": "Games and Library cannot be placed in the first teaching slot pair (periods 1 and 2) of any day.",
+      "cpSatHint": "Add(assign[period 1 or 2] == 0) for Games/Library",
+      "coverage": "text done"
+    },
+    {
+      "id": "G2",
+      "engineRuleId": "G2",
+      "code": "class11_12_games_library_same_day_ban",
+      "description": "For Class 11 and Class 12 sections: Games and Library cannot both appear on the same day.",
+      "cpSatHint": "Per section per day: Add(gamesToday + libraryToday <= 1)",
+      "coverage": "text done"
+    },
+    {
+      "id": "L1",
+      "engineRuleId": "L1",
+      "code": "same_first_word_same_day_ban",
+      "description": "Subjects sharing the same first word (e.g. English Language + English Literature) cannot appear on the same day for the same section.",
+      "cpSatHint": "Per section per day: at most one variant from each first-word group",
+      "coverage": "built-in done — HARD in production, not soft"
+    },
+    {
+      "id": "L2",
+      "engineRuleId": "L2",
+      "code": "no_break_crossing",
+      "description": "A subject cannot occupy the last slot before a break AND the first slot after a break on the same day.",
+      "cpSatHint": "Forbid adjacent across-break pairs for same subject",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "L3",
+      "engineRuleId": "L3",
+      "code": "max_consecutive_same_subject",
+      "description": "Reject placement that would create more than 3 consecutive slots with the same subject (breaks interrupt count). Default max run = 3.",
+      "cpSatHint": "For each window of 4 consecutive teaching slots: Add(sum <= 3)",
+      "coverage": "built-in + text done"
+    },
+    {
+      "id": "T2",
+      "engineRuleId": "T2",
+      "code": "formal_teaching_assignment",
+      "description": "Use the formally assigned teacher from teaching_assignments for each section-subject.",
+      "cpSatHint": "Teacher is fixed per assignment variable, not chosen at solve time",
+      "coverage": "built-in + data"
+    },
+    {
+      "id": "DATA-1",
+      "engineRuleId": "T4",
+      "code": "exclude_unassigned_placeholder",
+      "description": "Rows assigned to UNASSIGNED-TT must not produce scheduled lessons.",
+      "cpSatHint": "Skip variable creation; report in dataConflicts",
+      "coverage": "data quality"
+    }
+  ],
+  "blockAndLayout": [
+    {
+      "id": "H5",
+      "engineRuleId": "H5",
+      "code": "block_never_orphan_single",
+      "description": "Subjects with periodsPerDay >= 2 (block subjects) must be placed as consecutive slot pairs — never as a lone single in a half-pair.",
+      "cpSatHint": "Pair consecutive period vars or use block assignment variables",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "B1",
+      "engineRuleId": "B1",
+      "code": "consecutive_pairs_only",
+      "description": "Block subjects must occupy two adjacent non-break slots with no break between.",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "B3",
+      "engineRuleId": "B3",
+      "code": "single_subject_pairing",
+      "description": "Two periodsPerDay=1 subjects may be paired into the same consecutive slot-pair when weekly quotas allow.",
+      "coverage": "built-in done",
+      "assessmentNote": "CP-SAT may satisfy via constraints without explicit pairing phase"
+    },
+    {
+      "id": "B4",
+      "engineRuleId": "B4",
+      "code": "no_same_first_word_pairing",
+      "description": "Two single-period subjects sharing the same first word cannot be paired together in one slot-pair.",
+      "coverage": "built-in done"
+    },
+    {
+      "id": "B3b",
+      "engineRuleId": "B3b",
+      "code": "strict_per_day_per_week",
+      "description": "periodsPerDay and periodsPerWeek are hard caps on every placement path — no over-placement even in force-fill.",
+      "coverage": "built-in done"
+    }
+  ],
+  "soft": [
+    {
+      "id": "PR-MATH",
+      "engineRuleId": "PR/text",
+      "code": "math_morning_preference",
+      "description": "Prefer Mathematics in morning periods (periods 1–4 on Mon–Thu).",
+      "penaltyWeight": 10,
+      "coverage": "text: PREFER … MORNING"
+    },
+    {
+      "id": "PR1",
+      "engineRuleId": "PR1",
+      "code": "day_restricted_boost",
+      "description": "Prefer placing day-restricted subjects on their allowed days early.",
+      "coverage": "built-in soft scoring in heuristic engine"
+    },
+    {
+      "id": "PR5",
+      "engineRuleId": "PR5",
+      "code": "remaining_periods_priority",
+      "description": "Subjects with higher remaining weekly quota scheduled sooner.",
+      "coverage": "built-in soft"
+    },
+    {
+      "id": "DB-RULE",
+      "engineRuleId": "text",
+      "code": "max_one_games_per_day",
+      "description": "At most one Games period per section per day (from school scheduling_rules).",
+      "penaltyWeight": 8,
+      "coverage": "school DB rule — enforce as hard if feasible"
+    },
+    {
+      "id": "DB-RULE",
+      "engineRuleId": "text",
+      "code": "max_one_library_per_day",
+      "description": "At most one Library period per section per day (from school scheduling_rules).",
+      "penaltyWeight": 8,
+      "coverage": "school DB rule — enforce as hard if feasible"
+    },
+    {
+      "id": "DB-RULE",
+      "engineRuleId": "text",
+      "code": "max_two_consecutive_games",
+      "description": "Maximum two consecutive Games periods for a section.",
+      "penaltyWeight": 8,
+      "coverage": "school DB rule"
+    }
+  ],
+  "optional": [
+    {
+      "id": "R1",
+      "engineRuleId": "R1",
+      "code": "subject_room_type_map",
+      "description": "Computer → Computer Lab; Science/Physics/Chemistry/Biology → Science Lab; Games/PE → Sports Ground.",
+      "coverage": "text + built-in soft — no-op when rooms empty (R5)"
+    },
+    {
+      "id": "R2",
+      "engineRuleId": "R2",
+      "code": "room_no_double_booking",
+      "description": "A room cannot serve two sections in the same slot.",
+      "coverage": "R5: rooms not loaded in production API today"
+    },
+    {
+      "id": "M1",
+      "engineRuleId": "M1-M6",
+      "code": "merged_sections",
+      "description": "Merged section groups mirror master section schedule for a subject.",
+      "coverage": "text done — bonus for assessment"
+    },
+    {
+      "id": "P4",
+      "engineRuleId": "P4",
+      "code": "pre_primary_excluded",
+      "description": "Pre-Nursery, Nursery, Junior KG, Senior KG excluded from auto-generation in production.",
+      "coverage": "built-in — document if you exclude Pre-Primary sections"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "SE",
+      "engineRuleId": "SE1-SE8",
+      "description": "Substitution eligibility rules — follow-up epic, not in this assessment.",
+      "coverage": "deferred"
+    },
+    {
+      "id": "SA",
+      "engineRuleId": "SA1-SA8",
+      "description": "Substitution assignment and cap rules — follow-up epic.",
+      "coverage": "deferred"
+    },
+    {
+      "id": "FF",
+      "engineRuleId": "FF*",
+      "description": "Force-fill relaxation passes — heuristic engine only; CP-SAT uses feasibility + objective instead.",
+      "coverage": "built-in in JS engine, not ported"
+    }
+  ],
+  "gapsFound": [
+    {
+      "issue": "SC-3 was soft in old scheduling-rules.json",
+      "engineRule": "L1",
+      "resolution": "L1 is HARD in production — moved to mandatoryHard"
+    },
+    {
+      "issue": "HC-10/11/12 (games/library daily limits) not in Timetable-Engine-Rules.md §7",
+      "engineRule": "School DB scheduling_rules + TIMETABLE_GENERATION_DATA_REQUIREMENTS.md §8.2",
+      "resolution": "Listed under soft/DB-RULE; candidate may promote to hard if feasible"
+    },
+    {
+      "issue": "Block rules B1-B6 absent from old candidate assessment",
+      "engineRule": "A1, B1-B6, H5",
+      "resolution": "Added blockAndLayout tier — required for parity with production engine"
+    },
+    {
+      "issue": "Activity instructors not booked (T6, AC8)",
+      "engineRule": "T6, AC8",
+      "resolution": "Document in README — activity teachers do not cause teacher conflicts in production"
+    },
+    {
+      "issue": "Merged week bell layout (M1-M6 §2.1)",
+      "engineRule": "P4b, Q4b",
+      "resolution": "bell-schedule.json uses simplified Mon-Thu vs Fri-Sat split; full multi-profile merge is bonus"
+    }
+  ]
+}

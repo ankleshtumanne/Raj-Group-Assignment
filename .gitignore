@@ -1,0 +1,10 @@
+bin/
+obj/
+output/*.json
+!output/samples/
+*.user
+.vs/
+.idea/
+# Never commit secrets
+appsettings.*.local.json
+.env

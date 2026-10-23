@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RootNamespace>Rdpl.Timetable.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Rdpl.Timetable.Core\Rdpl.Timetable.Core.csproj" />
+    <ProjectReference Include="..\..\src\Rdpl.Timetable.Api\Rdpl.Timetable.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Integration tests run against the real client files shipped in /data (copied to a temp folder by RealDataFixture). -->
+    <None Include="..\..\data\client\**\*" LinkBase="data\client" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\config\**\*" LinkBase="config" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

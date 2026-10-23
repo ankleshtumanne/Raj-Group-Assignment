@@ -1,0 +1,336 @@
+{
+  "academicYear": "2026-27",
+  "weeklyTeachingCapacity": 52,
+  "totalSections": 41,
+  "sections": [
+    {
+      "id": "pre-nursery-lily",
+      "displayName": "Pre Nursery - Lily",
+      "grade": "Pre Nursery",
+      "section": "Lily",
+      "curriculumKey": "Pre Nursery",
+      "capacity": 35
+    },
+    {
+      "id": "nursery-lily",
+      "displayName": "Nursery - Lily",
+      "grade": "Nursery",
+      "section": "Lily",
+      "curriculumKey": "Nursery",
+      "capacity": 35
+    },
+    {
+      "id": "nursery-lavender",
+      "displayName": "Nursery - Lavender",
+      "grade": "Nursery",
+      "section": "Lavender",
+      "curriculumKey": "Nursery",
+      "capacity": 35
+    },
+    {
+      "id": "nursery-lotus",
+      "displayName": "Nursery - Lotus",
+      "grade": "Nursery",
+      "section": "Lotus",
+      "curriculumKey": "Nursery",
+      "capacity": 35
+    },
+    {
+      "id": "nursery-marigold",
+      "displayName": "Nursery - Marigold",
+      "grade": "Nursery",
+      "section": "Marigold",
+      "curriculumKey": "Nursery",
+      "capacity": 35
+    },
+    {
+      "id": "jk-lily",
+      "displayName": "Junior KG - Lily",
+      "grade": "Junior KG",
+      "section": "Lily",
+      "curriculumKey": "Junior KG",
+      "capacity": 35
+    },
+    {
+      "id": "jk-lavender",
+      "displayName": "Junior KG - Lavender",
+      "grade": "Junior KG",
+      "section": "Lavender",
+      "curriculumKey": "Junior KG",
+      "capacity": 35
+    },
+    {
+      "id": "jk-lotus",
+      "displayName": "Junior KG - Lotus",
+      "grade": "Junior KG",
+      "section": "Lotus",
+      "curriculumKey": "Junior KG",
+      "capacity": 35
+    },
+    {
+      "id": "sk-lily",
+      "displayName": "Senior KG - Lily",
+      "grade": "Senior KG",
+      "section": "Lily",
+      "curriculumKey": "Senior KG",
+      "capacity": 35
+    },
+    {
+      "id": "sk-lavender",
+      "displayName": "Senior KG - Lavender",
+      "grade": "Senior KG",
+      "section": "Lavender",
+      "curriculumKey": "Senior KG",
+      "capacity": 35
+    },
+    {
+      "id": "sk-lotus",
+      "displayName": "Senior KG - Lotus",
+      "grade": "Senior KG",
+      "section": "Lotus",
+      "curriculumKey": "Senior KG",
+      "capacity": 35
+    },
+    {
+      "id": "class-1-lily",
+      "displayName": "Grade 1 - Lily",
+      "grade": "1",
+      "section": "Lily",
+      "curriculumKey": "Class 1",
+      "capacity": 40
+    },
+    {
+      "id": "class-1-lavender",
+      "displayName": "Grade 1 - Lavender",
+      "grade": "1",
+      "section": "Lavender",
+      "curriculumKey": "Class 1",
+      "capacity": 40
+    },
+    {
+      "id": "class-1-lotus",
+      "displayName": "Grade 1 - Lotus",
+      "grade": "1",
+      "section": "Lotus",
+      "curriculumKey": "Class 1",
+      "capacity": 40
+    },
+    {
+      "id": "class-1-marigold",
+      "displayName": "Grade 1 - Marigold",
+      "grade": "1",
+      "section": "Marigold",
+      "curriculumKey": "Class 1",
+      "capacity": 40
+    },
+    {
+      "id": "class-2-lily",
+      "displayName": "Grade 2 - Lily",
+      "grade": "2",
+      "section": "Lily",
+      "curriculumKey": "Class 2",
+      "capacity": 40
+    },
+    {
+      "id": "class-2-lavender",
+      "displayName": "Grade 2 - Lavender",
+      "grade": "2",
+      "section": "Lavender",
+      "curriculumKey": "Class 2",
+      "capacity": 40
+    },
+    {
+      "id": "class-2-lotus",
+      "displayName": "Grade 2 - Lotus",
+      "grade": "2",
+      "section": "Lotus",
+      "curriculumKey": "Class 2",
+      "capacity": 40
+    },
+    {
+      "id": "class-2-marigold",
+      "displayName": "Grade 2 - Marigold",
+      "grade": "2",
+      "section": "Marigold",
+      "curriculumKey": "Class 2",
+      "capacity": 40
+    },
+    {
+      "id": "class-3-lily",
+      "displayName": "Grade 3 - Lily",
+      "grade": "3",
+      "section": "Lily",
+      "curriculumKey": "Class 3",
+      "capacity": 40
+    },
+    {
+      "id": "class-3-lavender",
+      "displayName": "Grade 3 - Lavender",
+      "grade": "3",
+      "section": "Lavender",
+      "curriculumKey": "Class 3",
+      "capacity": 40
+    },
+    {
+      "id": "class-3-lotus",
+      "displayName": "Grade 3 - Lotus",
+      "grade": "3",
+      "section": "Lotus",
+      "curriculumKey": "Class 3",
+      "capacity": 40
+    },
+    {
+      "id": "class-3-marigold",
+      "displayName": "Grade 3 - Marigold",
+      "grade": "3",
+      "section": "Marigold",
+      "curriculumKey": "Class 3",
+      "capacity": 40
+    },
+    {
+      "id": "class-4-lily",
+      "displayName": "Grade 4 - Lily",
+      "grade": "4",
+      "section": "Lily",
+      "curriculumKey": "Class 4",
+      "capacity": 40
+    },
+    {
+      "id": "class-4-lavender",
+      "displayName": "Grade 4 - Lavender",
+      "grade": "4",
+      "section": "Lavender",
+      "curriculumKey": "Class 4",
+      "capacity": 40
+    },
+    {
+      "id": "class-4-lotus",
+      "displayName": "Grade 4 - Lotus",
+      "grade": "4",
+      "section": "Lotus",
+      "curriculumKey": "Class 4",
+      "capacity": 40
+    },
+    {
+      "id": "class-5-lily",
+      "displayName": "Grade 5 - Lily",
+      "grade": "5",
+      "section": "Lily",
+      "curriculumKey": "Class 5",
+      "capacity": 40
+    },
+    {
+      "id": "class-5-lavender",
+      "displayName": "Grade 5 - Lavender",
+      "grade": "5",
+      "section": "Lavender",
+      "curriculumKey": "Class 5",
+      "capacity": 40
+    },
+    {
+      "id": "class-5-lotus",
+      "displayName": "Grade 5 - Lotus",
+      "grade": "5",
+      "section": "Lotus",
+      "curriculumKey": "Class 5",
+      "capacity": 40
+    },
+    {
+      "id": "class-6-lily",
+      "displayName": "Grade 6 - Lily",
+      "grade": "6",
+      "section": "Lily",
+      "curriculumKey": "Class 6",
+      "capacity": 40
+    },
+    {
+      "id": "class-6-lavender",
+      "displayName": "Grade 6 - Lavender",
+      "grade": "6",
+      "section": "Lavender",
+      "curriculumKey": "Class 6",
+      "capacity": 40
+    },
+    {
+      "id": "class-7-lily",
+      "displayName": "Grade 7 - Lily",
+      "grade": "7",
+      "section": "Lily",
+      "curriculumKey": "Class 7",
+      "capacity": 50
+    },
+    {
+      "id": "class-8-lily",
+      "displayName": "Grade 8 - Lily",
+      "grade": "8",
+      "section": "Lily",
+      "curriculumKey": "Class 8",
+      "capacity": 50
+    },
+    {
+      "id": "class-9-lily",
+      "displayName": "Grade 9 - Lily",
+      "grade": "9",
+      "section": "Lily",
+      "curriculumKey": "Class 9",
+      "capacity": 40
+    },
+    {
+      "id": "class-9-lavender",
+      "displayName": "Grade 9 - Lavender",
+      "grade": "9",
+      "section": "Lavender",
+      "curriculumKey": "Class 9",
+      "capacity": 40
+    },
+    {
+      "id": "class-10-lily",
+      "displayName": "Grade 10 - Lily",
+      "grade": "10",
+      "section": "Lily",
+      "curriculumKey": "Class 10",
+      "capacity": 40
+    },
+    {
+      "id": "class-10-lavender",
+      "displayName": "Grade 10 - Lavender",
+      "grade": "10",
+      "section": "Lavender",
+      "curriculumKey": "Class 10",
+      "capacity": 40
+    },
+    {
+      "id": "class-11-lily",
+      "displayName": "Grade 11 - Lily",
+      "grade": "11",
+      "section": "Lily",
+      "curriculumKey": "Class 11",
+      "capacity": 40
+    },
+    {
+      "id": "class-11-lavender",
+      "displayName": "Grade 11 - Lavender",
+      "grade": "11",
+      "section": "Lavender",
+      "curriculumKey": "Class 11",
+      "capacity": 40
+    },
+    {
+      "id": "class-12-lily",
+      "displayName": "Grade 12 - Lily",
+      "grade": "12",
+      "section": "Lily",
+      "curriculumKey": "Class 12",
+      "capacity": 40
+    },
+    {
+      "id": "class-12-lavender",
+      "displayName": "Grade 12 - Lavender",
+      "grade": "12",
+      "section": "Lavender",
+      "curriculumKey": "Class 12",
+      "capacity": 40
+    }
+  ],
+  "note": "Pre-Primary and KG curriculum is not in CLASS_WISE_SUBJECTS.md. For this assessment, use the same subject load pattern as Nursery/KG from TEACHER_CLASS_ALLOCATION.xlsx, or document your assumption if those sheets are incomplete."
+}

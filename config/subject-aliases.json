@@ -1,0 +1,25 @@
+{
+  "$comment": "ASSUMPTION FILE (not client data). Maps subject names used in teaching assignments to curriculum item names in CLASS_WISE_SUBJECTS.md. Exact-name matches always win over aliases. Every alias match is reported in dataConflicts as SUBJECT_ALIAS_APPLIED so it can be confirmed with the client. Set Matching.ApplySubjectAliases=false to disable.",
+  "aliases": [
+    {
+      "assignmentSubject": "History & Civics",
+      "curriculumItems": [ "History" ],
+      "reason": "Subject master names the subject 'History & Civics' (TIMETABLE_GENERATION_DATA_REQUIREMENTS.md §7.1); curriculum calls it 'History'."
+    },
+    {
+      "assignmentSubject": "English",
+      "curriculumItems": [ "English Language", "English Literature" ],
+      "reason": "Assignments use a single 'English' subject for grades whose curriculum splits English into Language and Literature. Only applied where the section curriculum has no plain 'English' item."
+    },
+    {
+      "assignmentSubject": "Accountancy",
+      "curriculumItems": [ "Accounts" ],
+      "reason": "Subject master lists 'Accountancy'; curriculum uses 'Accounts'."
+    },
+    {
+      "assignmentSubject": "Environmental Science",
+      "curriculumItems": [ "E.V.S." ],
+      "reason": "Subject master lists 'Environmental Science'; curriculum uses 'E.V.S.'."
+    }
+  ]
+}

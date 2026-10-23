@@ -1,0 +1,4 @@
+{
+  "$comment": "H2 input. The client's teacher_availability table is EMPTY (TIMETABLE_GENERATION_DATA_REQUIREMENTS.md §1), so every teacher is assumed fully available. Add entries to enforce off-days / unavailable periods, e.g. { \"teacherCode\": \"RVS115\", \"offDays\": [\"SATURDAY\"], \"unavailable\": [ { \"day\": \"MONDAY\", \"period\": 1 } ] }",
+  "teachers": []
+}

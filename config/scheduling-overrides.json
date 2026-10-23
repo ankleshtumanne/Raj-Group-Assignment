@@ -1,0 +1,5 @@
+{
+  "$comment": "H6 day restrictions and H9 activity fixed slots. The client dataset provides NONE (no dayRestrictions, activity_groups.fixed_slots not exported). Entries here are matched by curriculumKey + item name. Example dayRestriction: { \"curriculumKey\": \"Class 5\", \"item\": \"Karate / Gymnastics / Band / Skating\", \"days\": [\"SATURDAY\"] }. Example fixedSlot: { \"curriculumKey\": \"Class 1\", \"item\": \"Happy Feet\", \"slots\": [ { \"day\": \"FRIDAY\", \"period\": 9 }, { \"day\": \"FRIDAY\", \"period\": 10 } ] } (period omitted/null = any period that day, rule AC2).",
+  "dayRestrictions": [],
+  "fixedSlots": []
+}
